@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://www.gstatic.com/firebasejs/ui/3.5.2/firebase-ui-auth__ja.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+</head>
+
+<body>
+
+<h1>地域の音楽データベース管理画面</h1>
+<a href="ongaku-kenken.github.io">ホームページ</a><br/>
+<a href="is.gd/fuzokuform">フォーム</a><br/>
+<a href="https://docs.google.com/forms/d/1dMOG_8Yg7Z8-sfqz8GscXofkFaas6DaINP9mYhG43D8/edit?usp=sharing">フォーム結果</a><br/>
+<a href="https://docs.google.com/spreadsheets/d/16GIaUnWfyNbxXjG6WR5YK8GKtKLYAK5y23WvpUc6DGQ/edit?usp=sharing">フォーム結果(スプレッドシート)</a><br/>
+<a href="https://script.google.com/macros/s/AKfycbxxKEE1QyNFr1Nw18Jlw5-My1D81mQSPMrzOKbBaxgo6p9z0dJO/exec">JSONAPI</a><br/>
+<a href="https://analytics.google.com/analytics/web/#/p250531746/reports/defaulthome?params=_u..nav%3Ddefault"></a>
+
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyD_mZqMpUiHV4cITDcBizNQXMzVSVNOwTE",
+            authDomain: "fuzoku-ongaku.firebaseapp.com",
+            databaseURL: "https://fuzoku-ongaku.firebaseio.com",
+            projectId: "fuzoku-ongaku",
+            storageBucket: "fuzoku-ongaku.appspot.com",
+            messagingSenderId: "497412798032",
+            appId: "1:497412798032:web:a1cf67491736652c1f8355"
+        };
+        firebase.initializeApp(firebaseConfig);
+        firebase.auth().onAuthStateChanged((user) => {
+            //サインインチェック
+            if (!user) {
+                //サインインしていない場合
+                //ログインページに移動
+                location.href = '/index.html';
+            } else {
+            }
+        });
+//a0122-f7beb
+    </script>
+</body>
+
+</html>
